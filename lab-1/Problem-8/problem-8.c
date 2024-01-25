@@ -10,11 +10,11 @@ int main() {
 
     printf("Enter two numbers :");
     scanf("%d, %d", &a, &b);
-    
+
     addition(a, b);
     subtraction(a, b);
     multiplication(a, b);
-    division(a, b);
+    division((float)a, (float)b);
 
     return 0;
 }
@@ -35,6 +35,10 @@ void multiplication(int a, int b){
 }
 
 void division(float a, float b){
-	float quotient = a / b;
-	printf("The quotient of the given numbers : %f\n", quotient);
+	 if (b != 0) {
+        float quotient = a / b;
+        printf("The quotient of the given numbers: %f\n", quotient);
+    } else {
+        printf("Cannot divide by zero.\n");
+    }
 }
