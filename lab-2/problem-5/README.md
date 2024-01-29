@@ -12,9 +12,7 @@ Write a C program to determine eligibility for admission to a professional cours
 
 		Input the marks obtained in Physics :65 
 		Input the marks obtained in Chemistry :51 
-		Input the marks obtained in Mathematics :72 
-		Total marks of Maths, Physics and Chemistry : 188 
-		Total marks of Maths and Physics : 137 The candidate is not eligible.
+		Input the marks obtained in Mathematics :72
 
 
 		output
