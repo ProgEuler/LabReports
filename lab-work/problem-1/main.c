@@ -27,7 +27,7 @@ int main() {
     		printf("Its a vowel.\n");
     		break;
     	default :
-    		printf("Its a consonant.\n");
+    		printf("The alphabet is a consonant\n");
     }
     return 0;
 }
