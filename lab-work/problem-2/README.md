@@ -23,7 +23,7 @@ should be of ৳ 100/-
 
 	1001				Customer IDNO :1001
 	James				Customer Name :James
-	800					unit Consumed :800
-						Amount Charges @Tk. 2.00 per unit : 1600.00
-						Surchage Amount : 240.00
-						Net Amount Paid By the Customer : 1840.00
+	800				unit Consumed :800
+					Amount Charges @Tk. 2.00 per unit : 1600.00
+					Surchage Amount : 240.00
+					Net Amount Paid By the Customer : 1840.00
