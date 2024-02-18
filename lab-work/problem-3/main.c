@@ -21,6 +21,8 @@ int main() {
     	case 'F' :
     		printf("You have chosen Fail\n");
     	break;
+    	default : 
+    		printf("Invalid grade.\n");
     }
     return 0;
 }
