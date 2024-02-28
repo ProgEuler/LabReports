@@ -3,7 +3,6 @@
 int main() {
     int num, originalNum, reversedNum = 0, remainder;
 
-    // Input the number from the user
     printf("Enter any number: ");
     scanf("%d", &num);
 
@@ -11,9 +10,9 @@ int main() {
 
     // Reverse the number using a loop
     while (num != 0) {
-        remainder = num % 10;
-        reversedNum = reversedNum * 10 + remainder;
-        num /= 10;
+        remainder = num % 10; // Get the last digit of the number
+        reversedNum = reversedNum * 10 + remainder;// Build the reversed number by adding the last digit
+        num /= 10;// Remove the last digit from the original number
     }
 
     // Check if the original number is equal to its reverse
