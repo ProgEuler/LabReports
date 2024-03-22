@@ -1,52 +1,42 @@
 #include <stdio.h>
 #include <math.h>
 
-// Function to count the number of digits in a number
-int countDigits(int num) {
-    int count = 0;
-    while (num != 0) {
-        num /= 10;
-        count++;
-    }
-    return count;
-}
-
-// Function to check if a number is an Armstrong number
-int isArmstrong(int num) {
-    int originalNum, remainder, result = 0, n = 0;
-
-    // Storing the original number in a separate variable
-    originalNum = num;
-
-    // Counting the number of digits
-    n = countDigits(num);
-
-    // Calculating result
-    while (originalNum != 0) {
-        remainder = originalNum % 10;
-        result += pow(remainder, n);
-        originalNum /= 10;
-    }
-
-    // Checking if num is equal to the result
-    if (result == num)
-        return 1; // Return true if num is an Armstrong number
-    else
-        return 0; // Return false if num is not an Armstrong number
-}
+int count(int q);
+int armstrong(int p);
 
 int main() {
-    int num;
+    int n;
 
-    // Input number from user
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    printf("Check Armstrong number: ");
+    scanf("%d", &n);
 
-    // Checking if the number is an Armstrong number
-    if (isArmstrong(num))
-        printf("%d is an Armstrong number.\n", num);
-    else
-        printf("%d is not an Armstrong number.\n", num);
-
+    if (n == armstrong(n)) {
+        printf("%d is an Armstrong number.\n", n);
+    } else {
+        printf("%d is not an Armstrong number.\n", n);
+    }
     return 0;
+}
+
+int armstrong(int p) {
+    int rem, result = 0, temp = p;
+
+    while (p != 0) {
+        rem = p % 10; //get the last digit
+        result += pow(rem, count(temp)); //add the power of digit to the result
+        p /= 10; //move to the next digit
+    }
+    
+    return result;
+}
+
+int count(int q) {
+    int counter = 0;
+
+    //count the number by dividing by 10
+    while (q != 0) {
+        q /= 10;
+        counter++;
+    }
+    return counter;
 }
