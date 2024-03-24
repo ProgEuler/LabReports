@@ -11,29 +11,26 @@ int main() {
 
     printf("GCD of %d and %d is : %d\n", p, q, GCD(p, q));
     printf("LCM of %d and %d is : %d\n", p, q, LCM(p, q));
+
     return 0;
 }
 
 int GCD(int a, int b){
-	int x, i, gcd;
+	int temp, rem;
 
-	// Determine the smaller of the two numbers
-	if(a > b){
-		x = b;
-	}else{
-		x = a;
-	}
-	// Iterate from the smaller number downwards
-	for(i = x; i >= 1; i--){
-
-		// if both numbers are divisible by the current value of i, it is the GCD
-		if(a % i == 0 && b % i == 0){
-			gcd = i;
-			//Break the loop as we found the GCD cause we iterate downwards and we need biggest divisor
-			break;
-		}
-	}
-	return gcd;
+	// Ensure that a is greater than or equal to b
+    if (b > a) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+	// Euclidean algorithm to find GCD
+    while (b != 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+	return a;
 }
 
 int LCM(int a, int b){
